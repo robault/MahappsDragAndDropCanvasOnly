@@ -48,8 +48,8 @@ namespace MahappsDragAndDrop
             Vector diff = startPoint - mousePos;
 
             if (e.LeftButton == MouseButtonState.Pressed &&
-                Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance ||
-                Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)
+                (Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance ||
+                Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance))
             {
                 // Get the dragged ListViewItem
                 ListView listView = sender as ListView;
